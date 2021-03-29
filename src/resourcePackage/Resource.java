@@ -1,4 +1,4 @@
-package entities;
+package resourcePackage;
 
 import java.io.File;
 import java.io.IOException;
