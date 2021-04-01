@@ -12,10 +12,10 @@ abstract public class Resource
 	private URL _url;
 	private File _file;
 	private String _name;
-	private String _author;
+	private Author _author;
 	final public static int UNDEFINED = -1;
 	
-	public Resource(int localId, URL url, File file, String name, String author)
+	public Resource(int localId, URL url, File file, String name, Author author)
 	{
 		setlocalId(localId);
 		setUrl(url);
@@ -83,12 +83,12 @@ abstract public class Resource
 		_name = name;
 	}
 	
-	public String getAuthor()
+	public Author getAuthor()
 	{
 		return _author;
 	}
 	
-	public void setAuthor(String author)
+	public void setAuthor(Author author)
 	{
 		_author = author;
 	}
