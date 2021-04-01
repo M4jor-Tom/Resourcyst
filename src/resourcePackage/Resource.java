@@ -37,6 +37,11 @@ abstract public class Resource
 		}
 		return mime;
 	}
+	
+	public String toString()
+	{
+		return getName() + " | " + getAuthor();
+	}
 
 	public int getlocalId()
 	{
