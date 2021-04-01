@@ -12,6 +12,11 @@ public class Author
 		setName(name);
 	}
 	
+	public String toString()
+	{
+		return getName();
+	}
+	
 	public Author(long id, String name)
 	{
 		setId(id);
