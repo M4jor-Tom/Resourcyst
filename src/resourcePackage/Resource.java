@@ -12,14 +12,16 @@ abstract public class Resource
 	private URL _url;
 	private File _file;
 	private String _name;
+	private String _author;
 	final public static int UNDEFINED = -1;
 	
-	public Resource(int localId, URL url, File file, String name)
+	public Resource(int localId, URL url, File file, String name, String author)
 	{
 		setlocalId(localId);
 		setUrl(url);
 		setFile(file);
 		setName(name);
+		setAuthor(author);
 	}
 	
 	public String getMime()
@@ -74,5 +76,15 @@ abstract public class Resource
 	public void setName(String name)
 	{
 		_name = name;
+	}
+	
+	public String getAuthor()
+	{
+		return _author;
+	}
+	
+	public void setAuthor(String author)
+	{
+		_author = author;
 	}
 }

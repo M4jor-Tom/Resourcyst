@@ -5,8 +5,8 @@ import java.net.URL;
 
 public class ImageResource extends Resource
 {
-	public ImageResource(int localId, URL url, File file, String name)
+	public ImageResource(int localId, URL url, File file, String name, String author)
 	{
-		super(localId, url, file, name);
+		super(localId, url, file, name, author);
 	}
 }
