@@ -9,4 +9,9 @@ public class ImageResource extends Resource
 	{
 		super(localId, url, file, name, author);
 	}
+	
+	public ImageResource(URL url, File file, String name, Author author)
+	{
+		super(url, file, name, author);
+	}
 }

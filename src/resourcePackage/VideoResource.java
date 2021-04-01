@@ -9,4 +9,9 @@ public class VideoResource extends Resource
 	{
 		super(localId, url, file, name, author);
 	}
+	
+	public VideoResource(URL url, File file, String name, Author author)
+	{
+		super(url, file, name, author);
+	}
 }

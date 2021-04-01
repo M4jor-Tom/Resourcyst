@@ -24,6 +24,15 @@ abstract public class Resource
 		setAuthor(author);
 	}
 	
+	public Resource(URL url, File file, String name, Author author)
+	{
+		setlocalId(Resource.UNDEFINED);
+		setUrl(url);
+		setFile(file);
+		setName(name);
+		setAuthor(author);
+	}
+	
 	public String getMime()
 	{
 		String mime = "Error/Error";
