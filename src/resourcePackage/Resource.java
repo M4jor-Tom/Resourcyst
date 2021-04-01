@@ -40,7 +40,7 @@ abstract public class Resource
 	
 	public String toString()
 	{
-		return getName() + " | " + getAuthor();
+		return getAuthor() + " | " + getName();
 	}
 
 	public int getlocalId()
