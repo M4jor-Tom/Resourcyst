@@ -14,7 +14,7 @@ abstract public class Resource
 	private String _name;
 	final public static int UNDEFINED = -1;
 	
-	public Resource(int localId, URL url, File file, String name, Author author)
+	public Resource(int localId, URL url, File file, String name)
 	{
 		setlocalId(localId);
 		setUrl(url);
@@ -22,7 +22,7 @@ abstract public class Resource
 		setName(name);
 	}
 	
-	public Resource(URL url, File file, String name, Author author)
+	public Resource(URL url, File file, String name)
 	{
 		setlocalId(Resource.UNDEFINED);
 		setUrl(url);

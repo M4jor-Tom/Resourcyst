@@ -3,7 +3,7 @@ package resourcePackage;
 import java.io.File;
 import java.net.URL;
 
-public class ImageResource extends Resource
+public class ImageResource extends SingleAuthorResource
 {
 	public ImageResource(int localId, URL url, File file, String name, Author author)
 	{

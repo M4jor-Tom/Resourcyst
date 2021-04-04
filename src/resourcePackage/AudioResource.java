@@ -5,8 +5,8 @@ import java.net.URL;
 
 public class AudioResource extends Resource
 {
-	public AudioResource(URL url, File file, String name, Author author)
+	public AudioResource(URL url, File file, String name)
 	{
-		super(url, file, name, author);
+		super(url, file, name);
 	}
 }
