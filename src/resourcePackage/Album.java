@@ -20,6 +20,11 @@ public class Album
 		setAuthors(authors);
 		setName(name);
 	}
+	
+	public String toString()
+	{
+		return getName();
+	}
 
 	public ArrayList<Author> getAuthors()
 	{
