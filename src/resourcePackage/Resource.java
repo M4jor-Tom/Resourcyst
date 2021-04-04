@@ -12,7 +12,6 @@ abstract public class Resource
 	private URL _url;
 	private File _file;
 	private String _name;
-	private Author _author;
 	final public static int UNDEFINED = -1;
 	
 	public Resource(int localId, URL url, File file, String name, Author author)
@@ -21,7 +20,6 @@ abstract public class Resource
 		setUrl(url);
 		setFile(file);
 		setName(name);
-		setAuthor(author);
 	}
 	
 	public Resource(URL url, File file, String name, Author author)
@@ -30,7 +28,6 @@ abstract public class Resource
 		setUrl(url);
 		setFile(file);
 		setName(name);
-		setAuthor(author);
 	}
 	
 	public String getMime()
@@ -49,7 +46,7 @@ abstract public class Resource
 	
 	public String toString()
 	{
-		return getAuthor() + " | " + getName();
+		return getName();
 	}
 
 	public int getlocalId()
@@ -90,15 +87,5 @@ abstract public class Resource
 	public void setName(String name)
 	{
 		_name = name;
-	}
-	
-	public Author getAuthor()
-	{
-		return _author;
-	}
-	
-	public void setAuthor(Author author)
-	{
-		_author = author;
 	}
 }
