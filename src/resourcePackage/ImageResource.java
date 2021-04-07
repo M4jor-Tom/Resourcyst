@@ -3,15 +3,15 @@ package resourcePackage;
 import java.io.File;
 import java.net.URL;
 
-public class ImageResource extends SingleAuthorResource
+public class ImageResource extends Resource
 {
-	public ImageResource(int localId, URL url, File file, String name, Author author)
+	public ImageResource(int localId, URL url, File file, String name)
 	{
-		super(localId, url, file, name, author);
+		super(localId, url, file, name);
 	}
 	
-	public ImageResource(URL url, File file, String name, Author author)
+	public ImageResource(URL url, File file, String name)
 	{
-		super(url, file, name, author);
+		super(url, file, name);
 	}
 }
