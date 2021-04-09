@@ -26,9 +26,17 @@ public class MusicResource extends AudioResource
 	
 	public MusicResource(URL url, File file, String name, ArrayList<Album> albums)
 	{
-		super(url, file, name);
+		super(url, file, name, new ArrayList<>());
+		
 		setAlbums(new ArrayList<>());
 		setAlbums(albums);
+		
+		//Getting Authors from Albums
+		ArrayList<Author> authors = new ArrayList<>();
+		for(Album album: getAlbums())
+			authors.addAll(album.getAuthors());
+		
+		setAuthors(authors);
 	}
 	
 	public ArrayList<Album> getAlbums()
