@@ -1,22 +1,18 @@
 package resourcePackage;
 
-import java.util.HashMap;
-
 import versionystPackage.Versionable;
 
 public class Resourcyst extends Versionable
 {
-	@Override
-	public Integer _getVersionId()
+	public Resourcyst()
 	{
-		return 2;
+		super();
+		getDependencies().put("Versionyst", 4);
 	}
 	
 	@Override
-	public HashMap<String, Integer> getSubPackageExpectedVersions()
+	public Integer getVersionId()
 	{
-		HashMap<String, Integer> dependencies = new HashMap<>();
-		dependencies.put("Versionyst", 3);
-		return dependencies;
+		return 3;
 	}
 }
