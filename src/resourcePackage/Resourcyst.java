@@ -9,14 +9,14 @@ public class Resourcyst extends Versionable
 	@Override
 	public Integer _getVersionId()
 	{
-		return 1;
+		return 2;
 	}
 	
 	@Override
 	public HashMap<String, Integer> getSubPackageExpectedVersions()
 	{
 		HashMap<String, Integer> dependencies = new HashMap<>();
-		dependencies.put("Versionyst", 2);
+		dependencies.put("Versionyst", 3);
 		return dependencies;
 	}
 }
