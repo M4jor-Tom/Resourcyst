@@ -13,8 +13,10 @@ public class Resourcyst extends Versionable
 	}
 	
 	@Override
-	public void _checkSubPackagesVersions(HashMap<String, Integer> versionsIds)
+	public HashMap<String, Integer> getSubPackageExpectedVersions()
 	{
-		//No dependencies required
+		HashMap<String, Integer> dependencies = new HashMap<>();
+		dependencies.put("Versionyst", 2);
+		return dependencies;
 	}
 }
