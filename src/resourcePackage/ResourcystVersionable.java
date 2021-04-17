@@ -2,9 +2,9 @@ package resourcePackage;
 
 import versionystPackage.Versionable;
 
-public class Resourcyst extends Versionable
+public class ResourcystVersionable extends Versionable
 {
-	public Resourcyst()
+	public ResourcystVersionable()
 	{
 		super();
 		getDependencies().put("Versionyst", 4);
@@ -13,6 +13,6 @@ public class Resourcyst extends Versionable
 	@Override
 	public Integer getVersionId()
 	{
-		return 3;
+		return 4;
 	}
 }

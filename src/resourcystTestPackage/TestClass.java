@@ -1,8 +1,8 @@
-package testPackage;
+package resourcystTestPackage;
 
 import java.util.HashMap;
 
-import resourcePackage.Resourcyst;
+import resourcePackage.ResourcystVersionable;
 import versionystPackage.Versionable;
 import versionystPackage.Versionyst;
 
@@ -14,7 +14,7 @@ public class TestClass
 		HashMap<String, Integer> existingDependencies = new HashMap<>();
 		Versionable[] versionables =
 		{
-			new Resourcyst(),
+			new ResourcystVersionable(),
 			new Versionyst()
 		};
 		
