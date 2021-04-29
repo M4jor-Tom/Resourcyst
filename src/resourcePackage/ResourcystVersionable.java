@@ -13,6 +13,6 @@ public class ResourcystVersionable extends Versionable
 	@Override
 	public Integer getVersionId()
 	{
-		return 4;
+		return 5;
 	}
 }

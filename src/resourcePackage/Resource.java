@@ -6,6 +6,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 
 abstract public class Resource
 {
@@ -14,11 +15,11 @@ abstract public class Resource
 	private File _file;
 	private String _name;
 	
-	private ArrayList<Author> _authors;
+	private List<Author> _authors;
 	
 	final public static int UNDEFINED = -1;
 	
-	public Resource(int localId, URL url, File file, String name, ArrayList<Author> authors)
+	public Resource(int localId, URL url, File file, String name, List<Author> authors)
 	{
 		setlocalId(localId);
 		setUrl(url);
@@ -28,7 +29,7 @@ abstract public class Resource
 		setAuthors(authors);
 	}
 
-	public Resource(URL url, File file, String name, ArrayList<Author> authors)
+	public Resource(URL url, File file, String name, List<Author> authors)
 	{
 		this(UNDEFINED, url, file, name, authors);
 	}
@@ -123,12 +124,12 @@ abstract public class Resource
 		_name = name;
 	}
 
-	public ArrayList<Author> getAuthors()
+	public List<Author> getAuthors()
 	{
 		return _authors;
 	}
 
-	public void setAuthors(ArrayList<Author> authors)
+	public void setAuthors(List<Author> authors)
 	{
 		_authors = authors;
 	}

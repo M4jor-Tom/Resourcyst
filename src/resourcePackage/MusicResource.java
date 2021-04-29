@@ -4,9 +4,11 @@ import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 
+import java.util.List;
+
 public class MusicResource extends AudioResource
 {
-	ArrayList<Album> _albums;
+	private List<Album> _albums;
 	
 	public MusicResource(URL url, File file, String name, Album album)
 	{
@@ -39,7 +41,7 @@ public class MusicResource extends AudioResource
 		setAuthors(authors);
 	}
 	
-	public ArrayList<Album> getAlbums()
+	public List<Album> getAlbums()
 	{
 		return _albums;
 	}

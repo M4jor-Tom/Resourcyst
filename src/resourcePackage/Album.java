@@ -1,10 +1,11 @@
 package resourcePackage;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Album
 {
-	private ArrayList<Author> _authors;
+	private List<Author> _authors;
 	private String _name;
 	
 	public Album(Author author, String name)
@@ -14,7 +15,7 @@ public class Album
 		setName(name);
 	}
 	
-	public Album(ArrayList<Author> authors, String name)
+	public Album(List<Author> authors, String name)
 	{
 		setAuthors(new ArrayList<>());
 		setAuthors(authors);
@@ -26,12 +27,12 @@ public class Album
 		return getName();
 	}
 
-	public ArrayList<Author> getAuthors()
+	public List<Author> getAuthors()
 	{
 		return _authors;
 	}
 
-	public void setAuthors(ArrayList<Author> authors)
+	public void setAuthors(List<Author> authors)
 	{
 		_authors = authors;
 	}
