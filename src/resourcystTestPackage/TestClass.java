@@ -2,8 +2,8 @@ package com.example.androidmusyst.Resourcyst.src.resourcystTestPackage;
 
 import java.util.HashMap;
 
-import resourcePackage.ResourcystVersionable;
-import versionystPackage.Versionable;
+import com.example.androidmusyst.Resourcyst.src.resourcePackage.ResourcystVersionable;
+import com.example.androidmusyst.Versionyst.src.versionystPackage.Versionable;
 import com.example.androidmusyst.Versionyst.src.versionystPackage.Versionyst;
 
 public class TestClass

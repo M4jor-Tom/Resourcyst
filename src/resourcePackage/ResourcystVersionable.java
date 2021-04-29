@@ -1,6 +1,6 @@
-package resourcePackage;
+package com.example.androidmusyst.Resourcyst.src.resourcePackage;
 
-import versionystPackage.Versionable;
+import com.example.androidmusyst.Versionyst.src.versionystPackage.Versionable;
 
 public class ResourcystVersionable extends Versionable
 {
@@ -14,5 +14,11 @@ public class ResourcystVersionable extends Versionable
 	public Integer getVersionId()
 	{
 		return 5;
+	}
+
+	@Override
+	protected String getPackageName()
+	{
+		return "ResourcystVersionable";
 	}
 }

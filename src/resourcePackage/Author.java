@@ -1,4 +1,4 @@
-package resourcePackage;
+package com.example.androidmusyst.Resourcyst.src.resourcePackage;
 
 public class Author
 {

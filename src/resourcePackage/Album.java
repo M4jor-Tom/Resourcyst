@@ -1,4 +1,4 @@
-package resourcePackage;
+package com.example.androidmusyst.Resourcyst.src.resourcePackage;
 
 import java.util.ArrayList;
 import java.util.List;
