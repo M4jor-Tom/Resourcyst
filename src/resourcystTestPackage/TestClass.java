@@ -30,5 +30,7 @@ public class TestClass
 	{
 		//Checking versions
 		versionsCheck();
+		
+		System.out.println("That's good.");
 	}
 }
