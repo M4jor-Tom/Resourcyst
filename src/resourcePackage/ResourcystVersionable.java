@@ -7,7 +7,7 @@ public class ResourcystVersionable extends Versionable
 	public ResourcystVersionable()
 	{
 		super();
-		getDependencies().put("Versionyst", 4);
+		getDependencies().put("Versionyst", 5);
 	}
 	
 	@Override
