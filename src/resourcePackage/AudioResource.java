@@ -2,11 +2,11 @@ package resourcePackage;
 
 import java.io.File;
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.List;
 
 public class AudioResource extends Resource
 {
-	public AudioResource(URL url, File file, String name, ArrayList<Author> authors)
+	public AudioResource(URL url, File file, String name, List<Author> authors)
 	{
 		super(url, file, name, authors);
 	}
