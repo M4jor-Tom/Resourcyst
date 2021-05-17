@@ -1,0 +1,16 @@
+AudioResource.java
+ AudioResource
+ImageResource.java
+ ImageResource
+Author.java
+ Author
+MusicResource.java
+ MusicResource
+ MusicResource$1
+VideoResource.java
+ VideoResource
+Resource.java
+ Resource
+ Resource$1
+Album.java
+ Album
