@@ -5,17 +5,17 @@ import java.util.List;
 
 public class Album
 {
-	private List<Author> _authors;
+	private List<resourcePackage.Author> _authors;
 	private String _name;
 	
-	public Album(Author author, String name)
+	public Album(resourcePackage.Author author, String name)
 	{
 		setAuthors(new ArrayList<>());
 		getAuthors().add(author);
 		setName(name);
 	}
 	
-	public Album(List<Author> authors, String name)
+	public Album(List<resourcePackage.Author> authors, String name)
 	{
 		setAuthors(new ArrayList<>());
 		setAuthors(authors);
@@ -27,12 +27,12 @@ public class Album
 		return getName();
 	}
 
-	public List<Author> getAuthors()
+	public List<resourcePackage.Author> getAuthors()
 	{
 		return _authors;
 	}
 
-	public void setAuthors(List<Author> authors)
+	public void setAuthors(List<resourcePackage.Author> authors)
 	{
 		_authors = authors;
 	}

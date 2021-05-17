@@ -3,16 +3,15 @@ package resourcePackage;
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
-
 import java.util.List;
 
-public class MusicResource extends AudioResource
+public class MusicResource extends resourcePackage.AudioResource
 {
-	private List<Album> _albums;
+	private List<resourcePackage.Album> _albums;
 	
-	public MusicResource(URL url, File file, String name, Album album)
+	public MusicResource(URL url, File file, String name, resourcePackage.Album album)
 	{
-		this(url, file, name, new ArrayList<Album>() 
+		this(url, file, name, new ArrayList<resourcePackage.Album>()
 			{
 				/**
 				 * 
@@ -26,7 +25,7 @@ public class MusicResource extends AudioResource
 		);
 	}
 	
-	public MusicResource(URL url, File file, String name, ArrayList<Album> albums)
+	public MusicResource(URL url, File file, String name, ArrayList<resourcePackage.Album> albums)
 	{
 		super(url, file, name, new ArrayList<>());
 		
@@ -34,19 +33,19 @@ public class MusicResource extends AudioResource
 		setAlbums(albums);
 		
 		//Getting Authors from Albums
-		ArrayList<Author> authors = new ArrayList<>();
-		for(Album album: getAlbums())
+		ArrayList<resourcePackage.Author> authors = new ArrayList<>();
+		for(resourcePackage.Album album: getAlbums())
 			authors.addAll(album.getAuthors());
 		
 		setAuthors(authors);
 	}
 	
-	public List<Album> getAlbums()
+	public List<resourcePackage.Album> getAlbums()
 	{
 		return _albums;
 	}
 	
-	public void setAlbums(ArrayList<Album> albums)
+	public void setAlbums(ArrayList<resourcePackage.Album> albums)
 	{
 		_albums = albums;
 	}

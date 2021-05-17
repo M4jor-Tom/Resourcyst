@@ -15,11 +15,11 @@ abstract public class Resource
 	private File _file;
 	private String _name;
 	
-	private List<Author> _authors;
+	private List<resourcePackage.Author> _authors;
 	
 	final public static int UNDEFINED = -1;
 	
-	public Resource(int localId, URL url, File file, String name, List<Author> authors)
+	public Resource(int localId, URL url, File file, String name, List<resourcePackage.Author> authors)
 	{
 		setlocalId(localId);
 		setUrl(url);
@@ -29,14 +29,14 @@ abstract public class Resource
 		setAuthors(authors);
 	}
 
-	public Resource(URL url, File file, String name, List<Author> authors)
+	public Resource(URL url, File file, String name, List<resourcePackage.Author> authors)
 	{
 		this(UNDEFINED, url, file, name, authors);
 	}
 	
-	public Resource(int localId, URL url, File file, String name, Author author)
+	public Resource(int localId, URL url, File file, String name, resourcePackage.Author author)
 	{
-		this(localId, url, file, name, new ArrayList<Author>()
+		this(localId, url, file, name, new ArrayList<resourcePackage.Author>()
 			{
 				/**
 				 * 
@@ -50,7 +50,7 @@ abstract public class Resource
 		);
 	}
 
-	public Resource(URL url, File file, String name, Author author)
+	public Resource(URL url, File file, String name, resourcePackage.Author author)
 	{
 		this(UNDEFINED, url, file, name, author);
 	}
@@ -124,12 +124,12 @@ abstract public class Resource
 		_name = name;
 	}
 
-	public List<Author> getAuthors()
+	public List<resourcePackage.Author> getAuthors()
 	{
 		return _authors;
 	}
 
-	public void setAuthors(List<Author> authors)
+	public void setAuthors(List<resourcePackage.Author> authors)
 	{
 		_authors = authors;
 	}
