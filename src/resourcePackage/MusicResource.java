@@ -12,7 +12,7 @@ public class MusicResource extends AudioResource
 	
 	public MusicResource(URL url, File file, String name, Album album)
 	{
-		this(url, file, name, new ArrayList<Album>() 
+		this(url, file, name, new ArrayList<Album>()
 			{
 				/**
 				 * 

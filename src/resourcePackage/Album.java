@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Album
 {
+	private long _id;
 	private List<Author> _authors;
 	private String _name;
 	
@@ -14,6 +15,12 @@ public class Album
 		getAuthors().add(author);
 		setName(name);
 	}
+
+	public Album(long id, Author author, String name)
+	{
+		this(author, name);
+		setId(id);
+	}
 	
 	public Album(List<Author> authors, String name)
 	{
@@ -21,10 +28,26 @@ public class Album
 		setAuthors(authors);
 		setName(name);
 	}
+
+	public Album(long id, List<Author> authors, String name)
+	{
+		this(authors, name);
+		setId(id);
+	}
 	
 	public String toString()
 	{
 		return getName();
+	}
+
+	public long getId()
+	{
+		return _id;
+	}
+
+	public void setId(long id)
+	{
+		_id = id;
 	}
 
 	public List<Author> getAuthors()
