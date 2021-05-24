@@ -35,18 +35,8 @@ abstract public class Resource
 	
 	public Resource(int localId, URL url, File file, String name, Author author)
 	{
-		this(localId, url, file, name, new ArrayList<Author>()
-			{
-				/**
-				 * 
-				 */
-				private static final long serialVersionUID = -5372749102729506240L;
-	
-				{
-					add(author);
-				}
-			}
-		);
+		this(localId, url, file, name, new ArrayList<Author>());
+		getAuthors().add(author);
 	}
 
 	public Resource(URL url, File file, String name, Author author)
