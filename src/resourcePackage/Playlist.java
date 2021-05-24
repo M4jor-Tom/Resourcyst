@@ -38,6 +38,11 @@ public class Playlist
         this(id, name, new ArrayList<>(), new ArrayList<>(), new ArrayList<>(), new ArrayList<>());
     }
 
+    public Playlist(String name)
+    {
+        this(Resource.UNDEFINED_ID, name, new ArrayList<>(), new ArrayList<>(), new ArrayList<>(), new ArrayList<>());
+    }
+
     public long getId()
     {
         return _id;
