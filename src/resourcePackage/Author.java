@@ -8,23 +8,26 @@ public class Author
 	private long _id;
 	private String _name;
 	private List<Resource> _resources;
+	private List<Album> _albums;
 
-	public Author(long id, String name, List<Resource> resources)
+	public Author(long id, String name, List<Resource> resources, List<Album> albums)
 	{
 		setId(id);
 		setName(name);
 		setResources(new ArrayList<>());
 		setResources(resources);
+		setAlbums(new ArrayList<>());
+		setAlbums(albums);
 	}
 
 	public Author(long id, String name)
 	{
-		this(id, name, new ArrayList<>());
+		this(id, name, new ArrayList<>(), new ArrayList<>());
 	}
 	
 	public Author(String name)
 	{
-		this(Resource.UNDEFINED_ID, name, new ArrayList<>());
+		this(Resource.UNDEFINED_ID, name, new ArrayList<>(), new ArrayList<>());
 	}
 	
 	public String toString()
@@ -60,5 +63,15 @@ public class Author
 	public void setResources(List<Resource> resources)
 	{
 		_resources = resources;
+	}
+
+	public List<Album> getAlbums()
+	{
+		return _albums;
+	}
+
+	public void setAlbums(List<Album> albums)
+	{
+		_albums = albums;
 	}
 }
