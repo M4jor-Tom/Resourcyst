@@ -33,6 +33,11 @@ public class Playlist
         setMusicResources(musicResources);
     }
 
+    public Playlist(long id, String name)
+    {
+        this(id, name, new ArrayList<>(), new ArrayList<>(), new ArrayList<>(), new ArrayList<>());
+    }
+
     public long getId()
     {
         return _id;
