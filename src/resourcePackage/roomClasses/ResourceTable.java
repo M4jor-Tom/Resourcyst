@@ -37,6 +37,16 @@ public class ResourceTable
         _localId = localId;
     }
 
+    public int getTypeId()
+    {
+        return _typeId;
+    }
+
+    public void setTypeId(int typeId)
+    {
+        _typeId = typeId;
+    }
+
     public String getStringUrl()
     {
         return _stringUrl;
