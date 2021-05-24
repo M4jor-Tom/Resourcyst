@@ -12,6 +12,6 @@ public class VideoResource extends Resource
 	
 	public VideoResource(URL url, File file, String name)
 	{
-		this(UNDEFINED, url, file, name);
+		this(UNDEFINED_ID, url, file, name);
 	}
 }

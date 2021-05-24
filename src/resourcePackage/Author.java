@@ -4,11 +4,10 @@ public class Author
 {
 	private long _id;
 	private String _name;
-	private static final long UNDEFINED = -1;
 	
 	public Author(String name)
 	{
-		setId(UNDEFINED);
+		setId(Resource.UNDEFINED_ID);
 		setName(name);
 	}
 

@@ -14,10 +14,9 @@ abstract public class Resource
 	private URL _url;
 	private File _file;
 	private String _name;
-	
 	private List<Author> _authors;
 	
-	final public static int UNDEFINED = -1;
+	final public static int UNDEFINED_ID = -1;
 	
 	public Resource(int localId, URL url, File file, String name, List<Author> authors)
 	{
@@ -31,7 +30,7 @@ abstract public class Resource
 
 	public Resource(URL url, File file, String name, List<Author> authors)
 	{
-		this(UNDEFINED, url, file, name, authors);
+		this(UNDEFINED_ID, url, file, name, authors);
 	}
 	
 	public Resource(int localId, URL url, File file, String name, Author author)
@@ -52,7 +51,7 @@ abstract public class Resource
 
 	public Resource(URL url, File file, String name, Author author)
 	{
-		this(UNDEFINED, url, file, name, author);
+		this(UNDEFINED_ID, url, file, name, author);
 	}
 	
 	public Resource(int localId, URL url, File file, String name)
@@ -62,7 +61,7 @@ abstract public class Resource
 	
 	public Resource(URL url, File file, String name)
 	{
-		this(UNDEFINED, url, file, name);
+		this(UNDEFINED_ID, url, file, name);
 	}
 	
 	public String getMime()
