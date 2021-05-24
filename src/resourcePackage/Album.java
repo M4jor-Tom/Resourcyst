@@ -12,27 +12,29 @@ public class Album
 	
 	public Album(Author author, String name)
 	{
-		this(new ArrayList<>(), name);
+		this(-1, new ArrayList<>(), new ArrayList<>(), name);
 		getAuthors().add(author);
 	}
 
 	public Album(long id, Author author, String name)
 	{
-		this(author, name);
-		setId(id);
+		this(id, new ArrayList<>(), new ArrayList<>(), name);
+		getAuthors().add(author);
 	}
 	
 	public Album(List<Author> authors, String name)
 	{
-		setAuthors(new ArrayList<>());
-		setAuthors(authors);
-		setName(name);
+		this(-1, authors, new ArrayList<>(), name);
 	}
 
-	public Album(long id, List<Author> authors, String name)
+	public Album(long id, List<Author> authors, List<MusicResource> musicResources, String name)
 	{
-		this(authors, name);
 		setId(id);
+		setAuthors(new ArrayList<>());
+		setAuthors(authors);
+		setMusicResources(new ArrayList<>());
+		setMusicResources(musicResources);
+		setName(name);
 	}
 	
 	public String toString()
