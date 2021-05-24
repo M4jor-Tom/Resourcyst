@@ -11,9 +11,8 @@ public class Album
 	
 	public Album(Author author, String name)
 	{
-		setAuthors(new ArrayList<>());
+		this(new ArrayList<>(), name);
 		getAuthors().add(author);
-		setName(name);
 	}
 
 	public Album(long id, Author author, String name)
