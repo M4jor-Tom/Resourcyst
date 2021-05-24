@@ -7,6 +7,7 @@ public class Album
 {
 	private long _id;
 	private List<Author> _authors;
+	private List<MusicResource> _musicResources;
 	private String _name;
 	
 	public Album(Author author, String name)
@@ -57,6 +58,16 @@ public class Album
 	public void setAuthors(List<Author> authors)
 	{
 		_authors = authors;
+	}
+
+	public List<MusicResource> getMusicResources()
+	{
+		return _musicResources;
+	}
+
+	public void setMusicResources(List<MusicResource> musicResources)
+	{
+		_musicResources = musicResources;
 	}
 
 	public String getName()
