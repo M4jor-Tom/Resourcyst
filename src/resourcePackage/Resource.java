@@ -3,6 +3,8 @@ package com.example.androidmusyst.Resourcyst.src.resourcePackage;
 import androidx.room.Embedded;
 import androidx.room.Relation;
 
+import com.example.androidmusyst.Resourcyst.src.resourcePackage.roomClasses.ResourceTable;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;

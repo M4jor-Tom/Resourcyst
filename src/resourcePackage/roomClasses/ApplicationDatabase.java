@@ -1,4 +1,4 @@
-package com.example.androidmusyst.Resourcyst.src.resourcePackage;
+package com.example.androidmusyst.Resourcyst.src.resourcePackage.roomClasses;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
@@ -12,5 +12,5 @@ import androidx.room.RoomDatabase;
 )
 public abstract class ApplicationDatabase extends RoomDatabase
 {
-
+    public abstract ResourceDao resourceDao();
 }

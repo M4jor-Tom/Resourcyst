@@ -1,4 +1,4 @@
-package com.example.androidmusyst.Resourcyst.src.resourcePackage;
+package com.example.androidmusyst.Resourcyst.src.resourcePackage.roomClasses;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

@@ -1,9 +1,12 @@
-package com.example.androidmusyst.Resourcyst.src.resourcePackage;
+package com.example.androidmusyst.Resourcyst.src.resourcePackage.roomClasses;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+
+import com.example.androidmusyst.Resourcyst.src.resourcePackage.MusicResource;
+import com.example.androidmusyst.Resourcyst.src.resourcePackage.Resource;
 
 import java.util.List;
 
