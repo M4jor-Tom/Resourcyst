@@ -10,7 +10,7 @@ import java.util.List;
 
 abstract public class Resource
 {
-	private int _localId;
+	private long _localId;
 	private URL _url;
 	private File _file;
 	private String _name;
@@ -74,12 +74,12 @@ abstract public class Resource
 		return getName();
 	}
 
-	public int getlocalId()
+	public long getlocalId()
 	{
 		return _localId;
 	}
 
-	public void setlocalId(int localId)
+	public void setlocalId(long localId)
 	{
 		_localId = localId;
 	}
