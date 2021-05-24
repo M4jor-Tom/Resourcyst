@@ -16,7 +16,7 @@ public class MusicResource extends AudioResource
 		getAlbums().add(album);
 	}
 	
-	public MusicResource(URL url, File file, String name, ArrayList<Album> albums)
+	public MusicResource(URL url, File file, String name, List<Album> albums)
 	{
 		super(url, file, name, new ArrayList<>());
 		
@@ -24,7 +24,7 @@ public class MusicResource extends AudioResource
 		setAlbums(albums);
 		
 		//Getting Authors from Albums
-		ArrayList<Author> authors = new ArrayList<>();
+		List<Author> authors = new ArrayList<>();
 		for(Album album: getAlbums())
 			authors.addAll(album.getAuthors());
 		
@@ -36,7 +36,7 @@ public class MusicResource extends AudioResource
 		return _albums;
 	}
 	
-	public void setAlbums(ArrayList<Album> albums)
+	public void setAlbums(List<Album> albums)
 	{
 		_albums = albums;
 	}
