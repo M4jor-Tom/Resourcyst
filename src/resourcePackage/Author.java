@@ -1,20 +1,30 @@
 package com.example.androidmusyst.Resourcyst.src.resourcePackage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Author
 {
 	private long _id;
 	private String _name;
-	
-	public Author(String name)
+	private List<Resource> _resources;
+
+	public Author(long id, String name, List<Resource> resources)
 	{
-		setId(Resource.UNDEFINED_ID);
+		setId(id);
 		setName(name);
+		setResources(new ArrayList<>());
+		setResources(resources);
 	}
 
 	public Author(long id, String name)
 	{
-		setId(id);
-		setName(name);
+		this(id, name, new ArrayList<>());
+	}
+	
+	public Author(String name)
+	{
+		this(Resource.UNDEFINED_ID, name, new ArrayList<>());
 	}
 	
 	public String toString()
@@ -40,5 +50,15 @@ public class Author
 	public void setName(String name)
 	{
 		_name = name;
+	}
+
+	public List<Resource> getResources()
+	{
+		return _resources;
+	}
+
+	public void setResources(List<Resource> resources)
+	{
+		_resources = resources;
 	}
 }
