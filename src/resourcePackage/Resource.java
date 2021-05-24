@@ -25,6 +25,11 @@ abstract public class Resource
 
 	final public static int UNDEFINED_ID = -1;
 
+	final public static int AUDIO = 1;
+	final public static int IMAGE = 2;
+	final public static int MUSIC = 3;
+	final public static int VIDEO = 4;
+	
 	public Resource(long localId, URL url, File file, String name, List<Author> authors)
 	{
 		setlocalId(localId);
