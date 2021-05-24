@@ -12,18 +12,8 @@ public class MusicResource extends AudioResource
 	
 	public MusicResource(URL url, File file, String name, Album album)
 	{
-		this(url, file, name, new ArrayList<Album>()
-			{
-				/**
-				 * 
-				 */
-				private static final long serialVersionUID = 7727254019338119056L;
-	
-				{
-					add(album);
-				}
-			}
-		);
+		this(url, file, name, new ArrayList<Album>());
+		getAlbums().add(album);
 	}
 	
 	public MusicResource(URL url, File file, String name, ArrayList<Album> albums)
