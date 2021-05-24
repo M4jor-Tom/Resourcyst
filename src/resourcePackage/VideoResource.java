@@ -5,7 +5,7 @@ import java.net.URL;
 
 public class VideoResource extends Resource
 {
-	public VideoResource(int localId, URL url, File file, String name)
+	public VideoResource(long localId, URL url, File file, String name)
 	{
 		super(localId, url, file, name);
 	}
