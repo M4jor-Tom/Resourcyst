@@ -11,16 +11,16 @@ public class Author
 		setId(UNDEFINED);
 		setName(name);
 	}
-	
-	public String toString()
-	{
-		return getName();
-	}
-	
+
 	public Author(long id, String name)
 	{
 		setId(id);
 		setName(name);
+	}
+	
+	public String toString()
+	{
+		return getName();
 	}
 
 	public long getId()
@@ -42,5 +42,4 @@ public class Author
 	{
 		_name = name;
 	}
-	
 }
