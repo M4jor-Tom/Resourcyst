@@ -18,7 +18,7 @@ abstract public class Resource
 	
 	final public static int UNDEFINED_ID = -1;
 	
-	public Resource(int localId, URL url, File file, String name, List<Author> authors)
+	public Resource(long localId, URL url, File file, String name, List<Author> authors)
 	{
 		setlocalId(localId);
 		setUrl(url);
@@ -33,7 +33,7 @@ abstract public class Resource
 		this(UNDEFINED_ID, url, file, name, authors);
 	}
 	
-	public Resource(int localId, URL url, File file, String name, Author author)
+	public Resource(long localId, URL url, File file, String name, Author author)
 	{
 		this(localId, url, file, name, new ArrayList<Author>());
 		getAuthors().add(author);
@@ -44,7 +44,7 @@ abstract public class Resource
 		this(UNDEFINED_ID, url, file, name, author);
 	}
 	
-	public Resource(int localId, URL url, File file, String name)
+	public Resource(long localId, URL url, File file, String name)
 	{
 		this(localId, url, file, name, new ArrayList<>());
 	}
