@@ -18,6 +18,9 @@ public class ResourceTable
     @ColumnInfo(name = "resourceTypeId")
     public int _typeId;
 
+    @ColumnInfo(name = "albumId")
+    public long _albumId;
+
     @ColumnInfo(name = "url")
     public String _stringUrl;
 
@@ -45,6 +48,16 @@ public class ResourceTable
     public void setTypeId(int typeId)
     {
         _typeId = typeId;
+    }
+
+    public long getAlbumId()
+    {
+        return _albumId;
+    }
+
+    public void setAlbumId(long albumId)
+    {
+        _albumId = albumId;
     }
 
     public String getStringUrl()
