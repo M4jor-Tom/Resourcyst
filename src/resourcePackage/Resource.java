@@ -1,7 +1,11 @@
 package com.example.androidmusyst.Resourcyst.src.resourcePackage;
 
+import androidx.room.Embedded;
+import androidx.room.Relation;
+
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -10,14 +14,17 @@ import java.util.List;
 
 abstract public class Resource
 {
-	private long _localId;
-	private URL _url;
-	private File _file;
-	private String _name;
+	@Embedded
+	public ResourceTable _resourceTable;
+
+	@Relation(
+			parentColumn = "authorId",
+			entityColumn = "resourceId"
+	)
 	private List<Author> _authors;
-	
+
 	final public static int UNDEFINED_ID = -1;
-	
+
 	public Resource(long localId, URL url, File file, String name, List<Author> authors)
 	{
 		setlocalId(localId);
@@ -75,42 +82,51 @@ abstract public class Resource
 
 	public long getlocalId()
 	{
-		return _localId;
+		return _resourceTable.getLocalId();
 	}
 
 	public void setlocalId(long localId)
 	{
-		_localId = localId;
+		_resourceTable.setLocalId(localId);
 	}
 
 	public URL getUrl()
 	{
-		return _url;
+		try
+		{
+			return new URL(_resourceTable.getStringUrl());
+		}
+		catch(MalformedURLException e)
+		{
+			System.out.println("Error: url " + _resourceTable.getStringUrl() + " corresponds to nothing");
+		}
+
+		return null;
 	}
 	
 	public void setUrl(URL url)
 	{
-		_url = url;
+		_resourceTable.setStringUrl(url.toString());
 	}
 
 	public File getFile()
 	{
-		return _file;
+		return new File(_resourceTable.getStringPath());
 	}
 
 	public void setFile(File file)
 	{
-		_file = file;
+		_resourceTable.setStringPath(file.getPath());
 	}
 
 	public String getName()
 	{
-		return _name;
+		return _resourceTable.getName();
 	}
 
 	public void setName(String name)
 	{
-		_name = name;
+		_resourceTable.setName(name);
 	}
 
 	public List<Author> getAuthors()
