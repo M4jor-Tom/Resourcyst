@@ -6,33 +6,33 @@ import java.util.List;
 public class Album
 {
 	private long _id;
-	private List<Author> _authors;
 	private String _name;
-	
-	public Album(Author author, String name)
+	private List<Author> _authors;
+	private List<MusicResource> _musicResources;
+
+	public Album(long id, String name, List<Author> authors, List<MusicResource> musicResources)
 	{
-		setAuthors(new ArrayList<>());
-		getAuthors().add(author);
+		setId(id);
 		setName(name);
+		setAuthors(authors);
+		setMusicResources(musicResources);
 	}
 
 	public Album(long id, Author author, String name)
 	{
-		this(author, name);
-		setId(id);
+		this(id, name, new ArrayList<>(), new ArrayList<>());
+		getAuthors().add(author);
+	}
+
+	public Album(Author author, String name)
+	{
+		this(Resource.UNDEFINED_ID, name, new ArrayList<>(), new ArrayList<>());
+		getAuthors().add(author);
 	}
 	
 	public Album(List<Author> authors, String name)
 	{
-		setAuthors(new ArrayList<>());
-		setAuthors(authors);
-		setName(name);
-	}
-
-	public Album(long id, List<Author> authors, String name)
-	{
-		this(authors, name);
-		setId(id);
+		this(Resource.UNDEFINED_ID, name, authors, new ArrayList<>());
 	}
 	
 	public String toString()
@@ -50,6 +50,16 @@ public class Album
 		_id = id;
 	}
 
+	public String getName()
+	{
+		return _name;
+	}
+
+	public void setName(String name)
+	{
+		_name = name;
+	}
+
 	public List<Author> getAuthors()
 	{
 		return _authors;
@@ -60,13 +70,13 @@ public class Album
 		_authors = authors;
 	}
 
-	public String getName()
+	public List<MusicResource> getMusicResources()
 	{
-		return _name;
+		return _musicResources;
 	}
 
-	public void setName(String name)
+	public void setMusicResources(List<MusicResource> musicResources)
 	{
-		_name = name;
+		_musicResources = musicResources;
 	}
 }
