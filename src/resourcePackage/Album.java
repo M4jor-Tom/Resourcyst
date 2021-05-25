@@ -78,7 +78,7 @@ public class Album
 		_authors = authors;
 	}
 
-	public String getName()
+	public List<MusicResource> getMusicResources()
 	{
 		return _musicResources;
 	}
