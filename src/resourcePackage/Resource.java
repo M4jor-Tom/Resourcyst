@@ -17,7 +17,7 @@ abstract public class Resource
 	
 	private List<Author> _authors;
 	
-	final public static int UNDEFINED = -1;
+	final public static int UNDEFINED_ID = -1;
 	
 	public Resource(long localId, URL url, File file, String name, List<Author> authors)
 	{
