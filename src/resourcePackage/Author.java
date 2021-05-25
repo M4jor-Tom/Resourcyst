@@ -27,7 +27,8 @@ public class Author
 	
 	public Author(String name)
 	{
-		this(Resource.UNDEFINED_ID, name, new ArrayList<>(), new ArrayList<>());
+		setId(UNDEFINED);
+		setName(name);
 	}
 	
 	public String toString()
