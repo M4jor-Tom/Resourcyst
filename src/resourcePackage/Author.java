@@ -27,7 +27,7 @@ public class Author
 	
 	public Author(String name)
 	{
-		setId(UNDEFINED);
+		setId(Resource.UNDEFINED_ID);
 		setName(name);
 	}
 	
